@@ -1,47 +1,47 @@
-About xsimd
-===========
+About xtensor
+=============
 
-Home: http://quantstack.net/xsimd
+Home: http://quantstack.net/xtensor
 
 Package license: BSD 3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: C++ Wrappers for SIMD Intrinsices
+Summary: The C++ tensor algebra library
 
-High-level APIs for SIMD operations
+Multi dimensional arrays with broadcasting and lazy computing
 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xsimd-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xsimd-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/xsimd-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xsimd-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xsimd-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xsimd-feedstock/branch/master)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xtensor-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xtensor-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/xtensor-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xtensor-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xtensor-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xtensor-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xsimd/badges/version.svg)](https://anaconda.org/conda-forge/xsimd)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xsimd/badges/downloads.svg)](https://anaconda.org/conda-forge/xsimd)
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xtensor/badges/version.svg)](https://anaconda.org/conda-forge/xtensor)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xtensor/badges/downloads.svg)](https://anaconda.org/conda-forge/xtensor)
 
-Installing xsimd
-================
+Installing xtensor
+==================
 
-Installing `xsimd` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `xtensor` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `xsimd` can be installed with:
+Once the `conda-forge` channel has been enabled, `xtensor` can be installed with:
 
 ```
-conda install xsimd
+conda install xtensor
 ```
 
-It is possible to list all of the versions of `xsimd` available on your platform with:
+It is possible to list all of the versions of `xtensor` available on your platform with:
 
 ```
-conda search xsimd --channel conda-forge
+conda search xtensor --channel conda-forge
 ```
 
 
@@ -81,17 +81,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating xsimd-feedstock
-========================
+Updating xtensor-feedstock
+==========================
 
-If you would like to improve the xsimd recipe or build a new
+If you would like to improve the xtensor recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/xsimd-feedstock are
+Note that all branches in the conda-forge/xtensor-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
