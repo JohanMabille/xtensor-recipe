@@ -1,0 +1,52 @@
+{% set name = "xtensor" %}
+{% set version = "0.15.0" %}
+{% set sha256 = "67b818601c15ef15ea4d611a8cd7382588c340ebd9146c799a0210d212540455" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/QuantStack/xtensor/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  features:
+    - vc14  # [win]
+  number: 0
+  skip: true  # [win and py<35]
+
+requirements:
+  build:
+    - toolchain
+    - cmake
+    - xtl >=0.4.0,<0.5
+  run:
+    - xtl >=0.4.0,<0.5
+    - vc 14  # [win]
+
+test:
+  commands:
+    - test -d ${PREFIX}/include/xtensor  # [unix]
+    - test -f ${PREFIX}/include/xtensor/xarray.hpp  # [unix]
+    - test -f ${PREFIX}/lib/cmake/xtensor/xtensorConfig.cmake  # [unix]
+    - test -f ${PREFIX}/lib/cmake/xtensor/xtensorConfigVersion.cmake  # [unix]
+    - if exist %LIBRARY_PREFIX%\include\xtensor\xarray.hpp (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensorConfig.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensorConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+
+about:
+  home: http://quantstack.net/xsimd
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'The C++ tensor algebra library'
+  description: 'Multi dimensional arrays with broadcasting and lazy computing'
+  doc_url: http://xstensor.readthedocs.io
+  dev_url: https://github.com/QuantStack/xtensor
+
+extra:
+  recipe-maintainers:
+    - SylvainCorlay
+    - JohanMabille
