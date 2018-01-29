@@ -12,8 +12,6 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  features:
-    - vc14  # [win]
   number: 0
   skip: true  # [win and py<35]
 
@@ -24,7 +22,6 @@ requirements:
     - xtl >=0.4.0,<0.5
   run:
     - xtl >=0.4.0,<0.5
-    - vc 14  # [win]
 
 test:
   commands:
